@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="shortUrlApp"> <!-- ng-app substantiates our app for angular, saying that we want angular running in anything within the html tags -->
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">   
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>   
+        <script src="js/app.js"></script>
+    </head>
+    <body class="text-center">
+        <header>
+            <h3>URL Shortener Microservice: freeCodeCamp</h3>
+        </header>
+        <section ng-controller="shortAppCtrl">
+            <input placeholder="enter URL" ng-model="urlToShorten"> <!-- ng-mode connects the variable to html -->
+                <a class="btn btn-primary" ng-href="/new/{{urlToShorten}}">get shortURL</a>                
+        </section>
+    </body>
+</html>
